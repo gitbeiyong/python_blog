@@ -7,4 +7,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-)
+    url(r'^rango/', include("rango.urls")),
+    url(r'^$', 'article.views.home'),)
+    # url(r'^(?P<my_args>\d+)/$', 'article.views.detail', name='detail'),
+    # url(r'^category/(?P<category_name_slug>[\w\-]+)/$', 'rango.views.category', name='category'),)
